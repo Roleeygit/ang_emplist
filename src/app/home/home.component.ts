@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddemployeeComponent } from '../employee/addemployee/addemployee.component';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openEmployeeForm()
+  {
+    this._dialog.open(AddemployeeComponent);
   }
 
 }
