@@ -1,0 +1,33 @@
+.content
+{
+    padding-top: 10px;   
+}
+
+.row
+{
+    display: flex;
+    gap: 10px;
+
+    mat-form-field
+    {
+        width: 100%;
+    }
+}
+
+mat-form-field {
+    margin-right: 2px;
+}
+
+.date-button {
+    font-size: 12px; 
+    margin-top: 3px;
+    margin-right: 3px;
+    height: 50px;
+  }
+
+.genders
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}

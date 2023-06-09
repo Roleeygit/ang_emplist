@@ -5,8 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './addemployee.component.html',
   styleUrls: ['./addemployee.component.scss']
 })
-export class AddemployeeComponent implements OnInit {
+export class AddemployeeComponent implements OnInit 
+{
 
+  education : string[] =
+  [
+    "Matric",
+    "Diploma",
+    "Intermediate",
+    "Graduate",
+    "Post GRaduate"
+  ]
   constructor() { }
 
   ngOnInit(): void {
