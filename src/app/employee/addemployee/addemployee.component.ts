@@ -14,7 +14,7 @@ export class AddemployeeComponent implements OnInit
     "Diploma",
     "Intermediate",
     "Graduate",
-    "Post GRaduate"
+    "Post Graduate"
   ]
   constructor() { }
 
