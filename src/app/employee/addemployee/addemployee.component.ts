@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-addemployee',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class AddemployeeComponent implements OnInit 
 {
 
+  empForm: FormGroup;
+
   education : string[] =
   [
     "Matric",
@@ -15,8 +18,31 @@ export class AddemployeeComponent implements OnInit
     "Intermediate",
     "Graduate",
     "Post Graduate"
-  ]
-  constructor() { }
+  ];
+
+  constructor(private _fb: FormBuilder)
+  {
+    this.empForm = this._fb.group
+    ({
+      firstName: '',
+      lastName: '',
+      email: '',
+      dob: '',
+      gender: '',
+      education: '',
+      company: '',
+      experience: '',
+      package: '',
+    });
+  }
+
+  onFormSubmit()
+  {
+    if(this.empForm.valid)
+    {
+      console.log(this.empForm.value);
+    }
+  }
 
   ngOnInit(): void {
   }
